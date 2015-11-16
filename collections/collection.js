@@ -1,13 +1,13 @@
 Collection = new Meteor.Collection( 'collection' );
 
 Collection.allow({
-  insert: () => false,
+    insert: () => false,
   update: () => false,
   remove: () => false
 });
 
 Collection.deny({
-  insert: () => true,
+    insert: () => true,
   update: () => true,
   remove: () => true
 });
