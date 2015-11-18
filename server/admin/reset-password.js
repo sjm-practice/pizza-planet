@@ -1,6 +1,6 @@
-Accounts.emailTemplates.resetPassword.siteName = () => "Application Name";
-Accounts.emailTemplates.resetPassword.from     = () => "Application Name <admin@application.com>";
-Accounts.emailTemplates.resetPassword.subject  = () => "[Application Name] Reset Your Password";
+Accounts.emailTemplates.resetPassword.siteName = () => "Pizza Planet";
+Accounts.emailTemplates.resetPassword.from     = () => "Pizza Planet <admin@application.com>";
+Accounts.emailTemplates.resetPassword.subject  = () => "[Pizza Planet] Reset Your Password";
 
 Accounts.emailTemplates.resetPassword.text = ( user, url ) => {
   let emailAddress   = user.emails[0].address,
