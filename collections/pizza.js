@@ -1,5 +1,19 @@
 Pizza = new Meteor.Collection('pizza');
 
+
+// by default, disable client inserts, updates, removes
+Pizza.allow({
+  insert: () => false,
+  update: () => false,
+  remove: () => false
+});
+
+Pizza.deny({
+  insert: () => true,
+  update: () => true,
+  remove: () => true
+});
+
 var PizzaSchema = new SimpleSchema({
   'name': {
     type: String,

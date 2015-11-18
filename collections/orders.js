@@ -1,5 +1,18 @@
 Orders = new Meteor.Collection('orders');
 
+// by default, disable client inserts, updates, removes
+Orders.allow({
+  insert: () => false,
+  update: () => false,
+  remove: () => false
+});
+
+Orders.deny({
+  insert: () => true,
+  update: () => true,
+  remove: () => true
+});
+
 var OrdersSchema = new SimpleSchema({
   'userId': {
     type: String,

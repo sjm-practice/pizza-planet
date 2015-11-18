@@ -1,5 +1,18 @@
 Customers = new Meteor.Collection('customers');
 
+// by default, disable client inserts, updates, removes
+Customers.allow({
+  insert: () => false,
+  update: () => false,
+  remove: () => false
+});
+
+Customers.deny({
+  insert: () => true,
+  update: () => true,
+  remove: () => true
+});
+
 var CustomerSchema = new SimpleSchema({
   'name': {
     type: String,
