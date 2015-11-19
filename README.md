@@ -15,3 +15,9 @@ A starting point for Meteor apps.
 </table>
 
 [Read the Documentation](http://themeteorchef.com/base)
+
+
+## Notes
+* Using Base to complete 'Building Complex Forms' recipe
+* Note, the recipe source code for building complex forms, uses a previous version of Base (with IronRouter)
+* 
