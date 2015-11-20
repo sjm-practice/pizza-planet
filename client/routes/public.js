@@ -1,12 +1,28 @@
 const publicRedirect = () => {
   if ( Meteor.userId() ) {
-    FlowRouter.go( 'index' );
+    // if going to a public route, and user is logged in, redirect to profile
+    FlowRouter.go( 'profile' );
   }
 };
 
 const publicRoutes = FlowRouter.group({
   name: 'public',
   triggersEnter: [ publicRedirect ]
+});
+
+publicRoutes.route( '/', {
+  name: 'index',
+  action() {
+  BlazeLayout.render( 'default', { yield: 'index' } );
+}
+});
+
+publicRoutes.route( '/order', {
+  name: 'order',
+  action() {
+  // TODO - create order template, replace underConstruction
+  BlazeLayout.render( 'default', { yield: 'underConstruction' } );
+}
 });
 
 publicRoutes.route( '/signup', {
@@ -36,3 +52,4 @@ publicRoutes.route( '/reset-password/:token', {
     BlazeLayout.render( 'default', { yield: 'resetPassword' } );
   }
 });
+

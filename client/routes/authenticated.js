@@ -1,6 +1,7 @@
 const authenticatedRedirect = () => {
   if ( !Meteor.loggingIn() && !Meteor.userId() ) {
-    FlowRouter.go( 'login' );
+    // if going to an authenticated route, and user is not logged in, redirect to index
+    FlowRouter.go( 'index' );
   }
 };
 
@@ -9,9 +10,19 @@ const authenticatedRoutes = FlowRouter.group({
   triggersEnter: [ authenticatedRedirect ]
 });
 
-authenticatedRoutes.route( '/', {
-  name: 'index',
+authenticatedRoutes.route( '/profile', {
+  name: 'profile',
   action() {
-    BlazeLayout.render( 'default', { yield: 'index' } );
+  // TODO - create profile (aka pizzaProfile) template, replace underConstruction
+    BlazeLayout.render( 'default', { yield: 'underConstruction' } );
+  }
+});
+
+authenticatedRoutes.route('/logout', {
+  name: 'logout',
+  action() {
+    Meteor.logout();
+    Bert.alert('Logged out!', 'success');
+    FlowRouter.go(FlowRouter.path('index'));
   }
 });
