@@ -13,8 +13,7 @@ const authenticatedRoutes = FlowRouter.group({
 authenticatedRoutes.route( '/profile', {
   name: 'profile',
   action() {
-  // TODO - create profile (aka pizzaProfile) template, replace underConstruction
-    BlazeLayout.render( 'default', { yield: 'underConstruction' } );
+    BlazeLayout.render( 'default', { yield: 'pizzaProfile' } );
   }
 });
 
