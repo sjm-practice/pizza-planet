@@ -35,14 +35,26 @@ let validation = ( template ) => {
 let _handleSignup = ( template ) => {
   let user = {
     email: template.find( '[name="emailAddress"]' ).value,
-    password: template.find( '[name="password"]' ).value
+    password: template.find( '[name="password"]' ).value,
+    profile: {
+      customer: {
+        userId: "",
+        name: "",
+        streetAddress: "",
+        secondaryAddress: "",
+        city: "",
+        state: "",
+        zipCode: "",
+        telephone: ""
+      }
+    }
   };
 
   Accounts.createUser( user, ( error ) => {
     if ( error ) {
       Bert.alert( error.reason, 'danger' );
     } else {
-      Bert.alert( 'Welcome!', 'success' );
+      Bert.alert( 'Welcome to Pizza Planet!', 'success' );
     }
   });
 };
