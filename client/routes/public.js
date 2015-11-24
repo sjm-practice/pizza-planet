@@ -13,16 +13,8 @@ const publicRoutes = FlowRouter.group({
 publicRoutes.route( '/', {
   name: 'index',
   action() {
-  BlazeLayout.render( 'default', { yield: 'index' } );
-}
-});
-
-publicRoutes.route( '/order', {
-  name: 'order',
-  action() {
-  // TODO - create order template, replace underConstruction
-  BlazeLayout.render( 'default', { yield: 'underConstruction' } );
-}
+    BlazeLayout.render( 'default', { yield: 'index' } );
+  }
 });
 
 publicRoutes.route( '/signup', {

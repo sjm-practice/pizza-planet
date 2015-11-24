@@ -1,0 +1,20 @@
+<template name="order">
+    <div class="jumbotron text-center">
+        <h2>Place an Order</h2>
+        <p>Tell us what pizza you want and we'll put it on our rocketship to you in less than 30 minutes!</p>
+    </div>
+
+    <form id="place-order">
+        <h3 class="page-header">How do you want to order?</h3>
+
+        <div class="form-group">
+            <p>Pick a category to choose from, or build a custom pizza and save it for later!</p>
+        </div>
+
+        {{> pizzaCategories}}
+
+        <div class="submit-row">
+            <input type="submit" class="btn btn-success" value="Send My Order!"/>
+        </div>
+    </form>
+</template>

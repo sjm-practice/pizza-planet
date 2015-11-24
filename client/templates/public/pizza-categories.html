@@ -1,0 +1,41 @@
+<template name="pizzaCategories">
+  <ul class="nav nav-tabs" role="tablist">
+    {{#if currentUser}}
+      <li class="active" role="presentation" data-pizza-type="My Pizzas">
+        <a href="#my-pizzas" aria-controls="my-pizzas" role="tab" data-toggle="tab">My Pizzas</a>
+      </li>
+      <li role="presentation" data-pizza-type="Popular Pizzas">
+        <a href="#popular-pizzas" aria-controls="popular-pizzas" role="tab" data-toggle="tab">Popular Pizzas</a>
+      </li>
+    {{else}}
+      <li class="active" role="presentation" data-pizza-type="Popular Pizzas">
+          <a href="#popular-pizzas" aria-controls="popular-pizzas" role="tab" data-toggle="tab">Popular Pizzas</a>
+      </li>
+    {{/if}}
+    <li role="presentation" data-pizza-type="Custom Pizzas">
+        <a href="#custom-pizzas" aria-controls="custom-pizzas" role="tab" data-toggle="tab">Custom Pizzas</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    {{#if currentUser}}
+      <div class="tab-pane active" id="my-pizzas" role="tabpanel">
+        <!--{{> Template.dynamic template="pizzaList" data=myPizzas}}-->
+          <h4>My Pizzas panel</h4>
+      </div>
+      <div class="tab-pane" id="popular-pizzas" role="tabpanel">
+        <!--{{> Template.dynamic template="pizzaList" data=popularPizzas}}-->
+          <h4>Popular Pizzas panel</h4>
+      </div>
+    {{else}}
+      <div class="tab-pane active" id="popular-pizzas" role="tabpanel">
+        {{> Template.dynamic template="pizzaList" data=popularPizzas}}
+          <h4>Popular Pizzas panel</h4>
+      </div>
+    {{/if}}
+    <div class="tab-pane" id="custom-pizzas" role="tabpanel">
+      <!-- TODO {{> buildPizza}}-->
+        <h4>Custom Pizzas panel</h4>
+    </div>
+  </div>
+</template>
