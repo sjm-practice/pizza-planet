@@ -20,22 +20,19 @@
   <div class="tab-content">
     {{#if currentUser}}
       <div class="tab-pane active" id="my-pizzas" role="tabpanel">
-        <!--{{> Template.dynamic template="pizzaList" data=myPizzas}}-->
-          <h4>My Pizzas panel</h4>
+        {{> Template.dynamic template="pizzaList" data=myPizzas}}
       </div>
       <div class="tab-pane" id="popular-pizzas" role="tabpanel">
-        <!--{{> Template.dynamic template="pizzaList" data=popularPizzas}}-->
-          <h4>Popular Pizzas panel</h4>
+        {{> Template.dynamic template="pizzaList" data=popularPizzas}}
       </div>
     {{else}}
       <div class="tab-pane active" id="popular-pizzas" role="tabpanel">
         {{> Template.dynamic template="pizzaList" data=popularPizzas}}
-          <h4>Popular Pizzas panel</h4>
       </div>
     {{/if}}
     <div class="tab-pane" id="custom-pizzas" role="tabpanel">
-      <!-- TODO {{> buildPizza}}-->
-        <h4>Custom Pizzas panel</h4>
+      <!-- {{> buildPizza}}-->
+        <h4>TODO: Custom Pizzas panel</h4>
     </div>
   </div>
 </template>

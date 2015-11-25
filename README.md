@@ -26,3 +26,6 @@ A starting point for Meteor apps.
 * I think there may be an error in the recipe code, if (save/submit) update contact info throws an exception (like for missing a required field), that exception seems to be caught and not returned.
   - I changed the return exception, to throw exception, which seemed to correct the issue (per suggested best practices, http://stackoverflow.com/questions/20867771/how-to-return-error-from-meteor-methods-function
   - I also submitted an issue to TMC's github repo
+* Since using this base version, the routes are set up a little differently (flowRouter groups)
+  - one of the routes (order) actually needs to be accessible to those loggedIn (authenticated) and public. so moved that route to a new dual-use routes group
+    - probably could have been handled a few different ways, but I at least wanted to point out running in to this.
