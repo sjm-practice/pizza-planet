@@ -13,6 +13,24 @@
 
         {{> pizzaCategories}}
 
+        <h3 class="page-header">Where should we send your pizza?</h3>
+
+        {{#with customer}}
+          {{> Template.dynamic template="contactInformation"}}
+        {{/with}}
+
+        {{#unless currentUser}}
+          <h3 class="page-header">Create a pizza profile</h3>
+          <p>Specify a username and password for your pizza profile.
+           This is <strong>required to place your order</strong>.</p>
+          <h4>TODO profileSignup Template</h4>
+        {{/unless}}
+
+        <h3 class="page-header">Confirm and send your order</h3>
+        {{#with order}}
+          <h4>TODO orderConfirmation Template</h4>
+        {{/with}}
+
         <div class="submit-row">
             <input type="submit" class="btn btn-success" value="Send My Order!"/>
         </div>
