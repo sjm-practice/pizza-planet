@@ -1,0 +1,71 @@
+<template name="buildPizza">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="customPizzaName">Custom Pizza Name</label>
+                        <input type="text" class="form-control" name="customPizzaName"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <h4 class="page-header">Pizza Size</h4>
+                        <select name="size" class="form-control">
+                          {{#each sizes}}
+                            <option value="{{this}}">{{this}}"</option>
+                          {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group clearfix">
+                    <div class="col-xs-12 col-sm-6">
+                        <h4 class="page-header">Crust</h4>
+                        <select name="crust" class="form-control">
+                          {{#each crusts}}
+                              <option value="{{this}}">{{this}}</option>
+                          {{/each}}
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h4 class="page-header">Sauce</h4>
+                        <select name="sauce" class="form-control">
+                          {{#each sauces}}
+                              <option value="{{this}}">{{this}}</option>
+                          {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <h4 class="page-header">Toppings</h4>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <h5 class="page-header">Meats</h5>
+                            {{#each toppings.meats}}
+                                <label for="meatTopping" class="topping">
+                                  <input type="checkbox" name="meatTopping" value="{{this}}"/>
+                                  {{this}}
+                                </label>
+                            {{/each}}
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <h5 class="page-header">Non-Meats</h5>
+                            {{#each toppings.nonMeats}}
+                                <label for="nonMeatTopping" class="topping">
+                                  <input type="checkbox" name="nonMeatTopping" value="{{this}}"/>
+                                  {{this}}
+                                </label>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
