@@ -1,8 +1,41 @@
 {
   "public": {
-    "key": "value"
-  },
-  "private": {
-    "MAIL_URL": ""
+    "toppings": {
+      "meats": [
+        "Sausage",
+        "Pepperoni",
+        "Bacon",
+        "Ham",
+        "Beef"
+      ],
+      "nonMeats": [
+        "Banana Peppers",
+        "Green Peppers",
+        "Mushrooms",
+        "Black Olives",
+        "Onions",
+        "Feta Cheese",
+        "Jalapeno Peppers",
+        "Pineapple"
+      ]
+    },
+    "crusts": [
+      "Regular",
+      "Thin",
+      "Deep Dish",
+      "Pan"
+    ],
+    "sauces": [
+      "Tomato",
+      "Robust Tomato",
+      "Alfredo",
+      "Barbecue"
+    ],
+    "sizes": [
+      10,
+      12,
+      14,
+      16
+    ]
   }
 }
