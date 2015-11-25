@@ -62,5 +62,15 @@ Template.order.events({
       } else {
         template.currentOrder.set("pizza", {"name": "Build your custom pizza up above!", "price": 0});
       }
+    },
+
+    'click .pizza': function (event, template) {
+      template.currentOrder.set('pizza', this);
+
+      if (this.custom) {
+        templateOrder.set('type', 'My Pizzas');
+      } else {
+        template.currentOrder.set('type', 'Popular Pizzas');
+      }
     }
 });
