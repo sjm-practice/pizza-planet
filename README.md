@@ -29,3 +29,6 @@ A starting point for Meteor apps.
 * Since using this base version, the routes are set up a little differently (flowRouter groups)
   - one of the routes (order) actually needs to be accessible to those loggedIn (authenticated) and public. so moved that route to a new dual-use routes group
     - probably could have been handled a few different ways, but I at least wanted to point out running in to this.
+
+
+Completed submit order. But there is a defect related to saving custom built pizza (won't save). 
