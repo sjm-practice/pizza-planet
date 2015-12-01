@@ -7,10 +7,10 @@
     <p><a href="{{pathFor 'order'}}" class="btn btn-success btn-lg" role="button">Start an Order</a></p>
   </div>
   <h4 class="page-header">Your Orders</h4>
-  <!--TODO {{> orders}} -->
+  {{> orders}}
 
   <h4 class="page-header">Custom Pizzas</h4>
-  <!--TODO {{> Template.dynamic template='pizzaList' data=myPizzas}} -->
+  {{> Template.dynamic template='pizzaList' data=myPizzas}}
 
   <h4 class="page-header">Contact Information</h4>
   {{#with customer}}
