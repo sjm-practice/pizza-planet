@@ -31,4 +31,4 @@ A starting point for Meteor apps.
     - probably could have been handled a few different ways, but I at least wanted to point out running in to this.
 
 
-Completed submit order. But there is a defect related to saving custom built pizza (won't save). 
+Completed submit order. But there is a defect related to saving custom built pizza (the custom pizza won't save). 
